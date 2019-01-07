@@ -1,2 +1,2 @@
-# YZUIViewController
+# YZViewController
 快速定位iOS线上App崩溃在哪个控制器里面，需要和后台配合使用
