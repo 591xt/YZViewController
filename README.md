@@ -10,11 +10,16 @@
 3.
 在AppDelegate的didFinishLaunchingWithOptions方法里面写下如下代码：
 
-`` `if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"BUG"] isKindOfClass:[NSDictionary class]]) {
-        NSLog(@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"BUG"]);
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"BUG"];
-    }`
-    
-  ``
-    
+
+
+`if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"BUG"] isKindOfClass:[NSDictionary class]])`
+
+`{NSLog(@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"BUG"]);`
+
+`[[NSUserDefaults standardUserDefaults] removeObjectForKey:@"BUG"];`
+
+   `}`
+
+
+
 打印的字典内容即为崩溃的信息，与网上不同的是，这个可以直接显示在哪个控制器崩溃的，百分百准确，而且还可以手动把崩溃的用户其他信息给传送到后台，使BUG更容易重现和解决（前提是你的控制器必须继承YZViewController）
