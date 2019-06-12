@@ -10,11 +10,10 @@
 3.
 在AppDelegate的didFinishLaunchingWithOptions方法里面写下如下代码：
 
-``
-    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"BUG"] isKindOfClass:[NSDictionary class]]) {
+`` `if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"BUG"] isKindOfClass:[NSDictionary class]]) {
         NSLog(@"%@",[[NSUserDefaults standardUserDefaults] valueForKey:@"BUG"]);
         [[NSUserDefaults standardUserDefaults] removeObjectForKey:@"BUG"];
-    }
+    }`
     
   ``
     
